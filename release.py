@@ -11,5 +11,6 @@ if __name__ == "__main__":
     preset = "./presets/deepvoice3_vctk.json"
     subprocess.call("cp -v {preset} .".format(preset) ,shell=True)
     subprocess.call("pip install -q -e '.[train]'",shell=True)
+    subprocess.call("python -m nltk.downloader cmudict",shell=True)
 
 
